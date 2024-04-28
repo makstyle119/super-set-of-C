@@ -88,3 +88,12 @@ int main() // main function
 - cout = console out
 - cin = console in
 - endl = end line just like \n
+
+## Style Guide
+- // this is a single line comment = use for single line comments
+- /*
+    this is a multi-line
+    comment
+  */ = use for multi line comments
+- C++ is caseSensitive, means name and Name are two other things - kabab case is recommended in C++, eg: my_app.
+- C++ ignore white spaces so you can hit the enter button as much as you want - ( not recommended )
