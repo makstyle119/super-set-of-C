@@ -14,6 +14,8 @@ using this name `super-set-of-c` is only because github doesn't allow me to use 
   |- variables-basic.cpp
 |- 003
   |- concat-bassic.cpp
+|- 004
+  |- input.cpp
 ```
 ## Code Explaining
 
@@ -63,3 +65,26 @@ int main() // main function
   return 0;
 }
 ```
+
+- 004/input.cpp
+```
+# include <iostream>
+
+using std::cout;
+using std::cin;
+using std::endl;
+
+int main() // main function
+{
+  int slices;
+  cout << "How many slices of pizza do you have: ";
+  cin >> slices; // cin use to get input from the user.
+  cout << "You Have " << slices << " Slices Of Pizza." << endl;
+  return 0;
+}
+```
+
+## Keywords
+- cout = console out
+- cin = console in
+- endl = end line just like \n
