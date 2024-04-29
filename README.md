@@ -200,6 +200,15 @@ int main()
 }
 ```
 
+## Variable
+- first you define the type of variable
+- second you give it a name:
+- third you give a value:
+  - int age = 22;
+- you can just declare a variable and assign it like above or declare first and assign after that:
+  - int year;
+  - year = 2024;
+
 ## Keywords
 - cout = console out
 - cin = console in
