@@ -20,6 +20,8 @@ using this name `super-set-of-c` is only because github doesn't allow me to use 
   |- func-pow.cpp
 |- 006
   |- void-func.cpp
+|- 007
+  |- integer-data-type.cpp
 ```
 ## Code Explaining
 
@@ -130,7 +132,6 @@ int main() // main function
 // }
 ```
 
-
 - 006/void-func.cpp
   - void function are those which doesn't return anything.
 ```
@@ -166,6 +167,36 @@ int main() // main function
   cin >> exponent;
   print_pow(base, exponent);
   return 0;
+}
+```
+
+- 007/integer-data-type.cpp
+  - there are 8 type of integer
+    - short # 8 bit Min.
+    - int # 16 bit Min.
+    - long # 32 bit Min.
+    - long long # 64 bit Min.
+    - unsigned short # 8 bit Min - only positive.
+    - int # 16 bit Min - only positive.
+    - long # 32 bit Min - only positive.
+    - long long # 64 bit Min - only positive.
+```
+#include <iostream>
+#include <climits>
+
+using std::cout;
+
+int main()
+{
+  short a; // min: 8 bit
+  int b; // min: 16 bit
+  long c; // min: 32 bit
+  long long d; // min: 64 bit
+  // short <= int <= long <= long long
+  unsigned short aa;
+  unsigned int bb;
+  unsigned long cc;
+  unsigned long long dd;
 }
 ```
 
