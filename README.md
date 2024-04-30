@@ -22,6 +22,8 @@ using this name `super-set-of-c` is only because github doesn't allow me to use 
   |- void-func.cpp
 |- 007
   |- integer-data-type.cpp
+|- 0087
+  |- char-data-type.cpp
 ```
 ## Code Explaining
 
@@ -91,7 +93,7 @@ int main() // main function
 ```
 
 - 005/func-pow.cpp
-  - you can declare and then define function at once or just declare on top and then define in both but make sure you declare them before calling them.
+  - you can `declare` and then `define function` at once or just `declare` on top and then `define` in both but make sure you declare them before calling them.
 ```
 # include <iostream>
 
@@ -133,7 +135,7 @@ int main() // main function
 ```
 
 - 006/void-func.cpp
-  - void function are those which doesn't return anything.
+  - `void function` are those which doesn't `return` anything.
 ```
 # include <iostream>
 # include <cmath>
@@ -171,15 +173,15 @@ int main() // main function
 ```
 
 - 007/integer-data-type.cpp
-  - there are 8 type of integer
-    - short # 8 bit Min.
-    - int # 16 bit Min.
-    - long # 32 bit Min.
-    - long long # 64 bit Min.
-    - unsigned short # 8 bit Min - only positive.
-    - int # 16 bit Min - only positive.
-    - long # 32 bit Min - only positive.
-    - long long # 64 bit Min - only positive.
+  - there are `8 type of integer`
+    - short # `16 bit` Min.
+    - int # `16 bit` Min.
+    - long # `32 bit` Min.
+    - long long # `64 bit` Min.
+    - unsigned short # `16 bit` Min - only positive.
+    - int # `16 bit` Min - only positive.
+    - long # `32 bit` Min - only positive.
+    - long long # `64 bit` Min - only positive.
 ```
 #include <iostream>
 #include <climits>
@@ -188,7 +190,7 @@ using std::cout;
 
 int main()
 {
-  short a; // min: 8 bit
+  short a; // min: 16 bit
   int b; // min: 16 bit
   long c; // min: 32 bit
   long long d; // min: 64 bit
@@ -200,25 +202,47 @@ int main()
 }
 ```
 
+- 008/char-data-type.cpp
+  - there are `2 type of char`
+    - signed char # `8 bit` Min.
+    - unsigned char # `8 bit` Min - only positive.
+```
+#include <iostream>
+#include <climits>
+
+using std::cout;
+using std::endl;
+
+int main()
+{
+  char A = 'A'; // for char you can only use '' - char is 8 bit
+  signed char B = 66; // can upto 128
+  unsigned char C = 'C'; // can upto 255
+  cout << int(A) << endl; // you can typecast char to int by using int(x)
+  cout << B << endl; // chat by default convert value of B into char table: 66 = B 
+  cout << C << endl;
+}
+```
+
 ## Variable
 - first you define the type of variable
 - second you give it a name:
 - third you give a value:
-  - int age = 22;
+  - `int age = 22;`
 - you can just declare a variable and assign it like above or declare first and assign after that:
-  - int year;
-  - year = 2024;
+  - `int year;`
+  - `year = 2024;`
 
 ## Keywords
-- cout = console out
-- cin = console in
-- endl = end line just like \n
+- `cout` = console out
+- `cin` = console in
+- `endl` = end line just like \n
 
 ## Style Guide
-- // this is a single line comment = use for single line comments
-- /*
+- `//` this is a single line comment = use for single line comments
+- `/*
     this is a multi-line
     comment
-  */ = use for multi line comments
-- C++ is caseSensitive, means name and Name are two other things - kabab case is recommended in C++, eg: my_app.
-- C++ ignore white spaces so you can hit the enter button as much as you want - ( not recommended )
+  */` = use for multi line comments
+- C++ is caseSensitive, means name and Name are two other things - `kabab case` is recommended in C++, eg: my_app.
+- C++ ignore `white spaces` so you can hit the enter button as much as you want - ( not recommended )
