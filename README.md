@@ -26,6 +26,8 @@ using this name `super-set-of-c` is only because github doesn't allow me to use 
   |- char-data-type.cpp
 |- 009
   |- escape-sequences.cpp
+|- 010
+  |- bool-data-type.cpp
 ```
 ## Code Explaining
 
@@ -244,6 +246,24 @@ int main()
   cout << "hello\"world" << endl; // \" Insert a double quote character in the text at this point.
   cout << "hello\\world" << endl; // \\ Insert a backslash character in the text at this point.
   cout << "hello\aworld" << endl; // \a create a beep sound on run.
+}
+```
+
+- 010/bool-data-type.cpp
+  - there are `2 type of bool in almost all language unless you come from DreamBerd`
+    - `True` != `0` // anything which is not `0`.
+    - `False` = `0` // only `0`.
+```
+#include <iostream>
+
+using std::cout;
+using std::endl;
+using std::boolalpha; // to print true and false rather then 0 and 1
+
+int main()
+{
+  bool anime_is_life = 1; // 0 = false else true
+  cout << boolalpha << anime_is_life << endl;
 }
 ```
 
