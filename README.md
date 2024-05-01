@@ -28,6 +28,8 @@ using this name `super-set-of-c` is only because github doesn't allow me to use 
   |- escape-sequences.cpp
 |- 010
   |- bool-data-type.cpp
+|- 011
+  |- floating-point-data-type.cpp
 ```
 ## Code Explaining
 
@@ -264,6 +266,26 @@ int main()
 {
   bool anime_is_life = 1; // 0 = false else true
   cout << boolalpha << anime_is_life << endl;
+}
+```
+
+- 011/floating-point-data-type.cpp
+  - there are `3 type of floating point`
+    - `float` // trust worthy upto 6 digits.
+    - `double` // 77000 = 7.7 * 10^4 = 7.7E4 (scientific notation) - trust worthy upto 15 digits.
+    - `long double` // trust worthy upto 18 digits
+```
+#include <iostream>
+
+using std::cout;
+using std::endl;
+
+int main()
+{
+  float a; // trust worthy upto 6 digits.
+  double b = 7.7E4; // 77000 = 7.7 * 10^4 = 7.7E4 (scientific notation) - trust worthy upto 15 digits.
+  long double c; // trust worthy upto 18 digits.
+  cout << anime_is_life << endl;
 }
 ```
 
