@@ -22,8 +22,10 @@ using this name `super-set-of-c` is only because github doesn't allow me to use 
   |- void-func.cpp
 |- 007
   |- integer-data-type.cpp
-|- 0087
+|- 008
   |- char-data-type.cpp
+|- 009
+  |- escape-sequences.cpp
 ```
 ## Code Explaining
 
@@ -221,6 +223,27 @@ int main()
   cout << int(A) << endl; // you can typecast char to int by using int(x)
   cout << B << endl; // chat by default convert value of B into char table: 66 = B 
   cout << C << endl;
+}
+```
+
+- 009/escape-sequences.cpp
+```
+#include <iostream>
+
+using std::cout;
+using std::endl;
+
+int main()
+{
+  cout << "hello\tworld" << endl; // \t Insert a tab in the text at this point.
+  cout << "hello\bworld" << endl; // \b Insert a backspace in the text at this point.
+  cout << "hello\nworld" << endl; // \n Insert a newline in the text at this point.
+  cout << "hello\rworld" << endl; // \r Insert a carriage return in the text at this point.
+  cout << "hello\fworld" << endl; // \f Insert a formfeed in the text at this point. 
+  cout << "hello\'world" << endl; // \' Insert a single quote character in the text at this point.
+  cout << "hello\"world" << endl; // \" Insert a double quote character in the text at this point.
+  cout << "hello\\world" << endl; // \\ Insert a backslash character in the text at this point.
+  cout << "hello\aworld" << endl; // \a create a beep sound on run.
 }
 ```
 
