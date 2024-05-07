@@ -30,6 +30,8 @@ using this name `super-set-of-c` is only because github doesn't allow me to use 
   |- bool-data-type.cpp
 |- 011
   |- floating-point-data-type.cpp
+|- 012
+  |- const-macro-enum.cpp
 ```
 ## Code Explaining
 
@@ -289,6 +291,26 @@ int main()
 }
 ```
 
+- 011/const-macro-enum.cpp
+  - there are `3 ways to make const`
+    - `const`
+    - `enum`
+    - `define`
+```
+#include <iostream>
+#define X 10 // macro - const - define - you can't redeclare it - use in C
+
+using std::cout;
+using std::endl;
+
+int main()
+{
+  const int x = 5; // const is read-only - you can't redeclare it 
+  enum { y = 100 }; // enum - define - you can't redeclare it - same as macro/const
+  cout << x << endl;
+}
+```
+
 ## Variable
 - first you define the type of variable
 - second you give it a name:
@@ -297,6 +319,10 @@ int main()
 - you can just declare a variable and assign it like above or declare first and assign after that:
   - `int year;`
   - `year = 2024;`
+- you can just declare a const variable in different ways:
+  - `#define X 10`
+  - `const y = 20`
+  - `enum { z = 30 }`
 
 ## Keywords
 - `cout` = console out
