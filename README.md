@@ -34,6 +34,8 @@ using this name `super-set-of-c` is only because github doesn't allow me to use 
   |- const-macro-enum.cpp
 |- 013
   |- numeric-function.cpp
+|- 014
+  |- string-class-c-string.cpp
 ```
 ## Code Explaining
 
@@ -314,10 +316,6 @@ int main()
 ```
 
 - 013/numeric-function.cpp
-  - there are `3 ways to make const`
-    - `const`
-    - `enum`
-    - `define`
 ```
 #include <iostream>
 #include <cmath>
@@ -335,6 +333,27 @@ int main()
   std::cout << trunc(-3.9) << std::endl; // do trunc - same as floor until you go on negative - in negative it go for low point
   std::cout << round(-3.9) << std::endl; // do round - 4 - 0.01-0.49 => 0 || 0.51-0.99 => 1
   
+}
+```
+
+- 014/string-class-c-string.cpp
+  - there are `2 ways to declare string`
+    - `string` - use in C++
+    - `char` - come from C
+```
+#include <iostream>
+#include <string>
+
+// String Class is superior to C-String
+int main()
+{
+  std::string greeting = "hello";
+  std::string complete_greeting = "there";
+  complete_greeting += "!";
+  std::cout << complete_greeting << std::endl;
+  std::cout << greeting.length() << std::endl;
+
+  char name[] = "MAK"; // array of characters - you can't resign it 
 }
 ```
 
