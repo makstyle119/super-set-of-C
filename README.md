@@ -36,6 +36,8 @@ using this name `super-set-of-c` is only because github doesn't allow me to use 
   |- numeric-function.cpp
 |- 014
   |- string-class-c-string.cpp
+|- 015
+  |- input-more-then-one.cpp
 ```
 ## Code Explaining
 
@@ -354,6 +356,25 @@ int main()
   std::cout << greeting.length() << std::endl;
 
   char name[] = "MAK"; // array of characters - you can't resign it 
+}
+```
+
+- 015/input-more-then-one.cpp
+  - there are `2 ways to get input which is more then one word`
+    - `getline` - use for string
+    - `cin.getline()` - use for number
+```
+#include <iostream>
+#include <string>
+
+// String Class is superior to C-String
+int main()
+{
+  std::string greeting;
+  getline(std::cin, greeting); // for sting
+  std::cout << greeting << std::endl;
+  // std::cin.getline(); // for number
+  return 0;
 }
 ```
 
