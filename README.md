@@ -40,6 +40,8 @@ using this name `super-set-of-c` is only because github doesn't allow me to use 
   |- input-more-then-one.cpp
 |- 016
   |- string-modifier.cpp
+|- 017
+  |- literal-constant.cpp
 ```
 ## Code Explaining
 
@@ -426,6 +428,39 @@ int main()
   std::cout << greeting.find_first_of("aeioou") << " - substr " << std::endl; // find the first match character and return index
 
   return 0;
+}
+```
+
+- 017/literal-constant.cpp
+  - there are a few more constant in c++:
+    - `U/L/LL/etc` - you can assign a data type by just adding this in the last.
+      - `U` unassign
+      - `L` Long
+      - `LL` Long Long
+      - `0x` hexadecimal
+      - `0` octal decimal
+    - `hex` - you can use hex as a pipe to convert number into hexadecimal
+    - `oct` - you can use oct as a pipe to convert number into octal decimal
+```
+#include <iostream>
+#include <string>
+
+int main()
+{
+  auto x = 5U; // unsigned int - it you want to use it you should g++ file-path -std=c++17
+  std::cout << x << std::endl;
+
+  int hex_number = 0x5; //  0x represent hexadecimal
+  std::cout << hex_number << std::endl;
+
+  int oct_number = 010; //  0 represent octal_decimal
+  std::cout << oct_number << std::endl;
+
+  int hex_number_print = 40; //
+  std::cout std::hex << hex_number_print << std::endl;
+
+  int oct_number_print = 30; //  0 represent octal_decimal
+  std::cout << std::oct << number << std::endl;
 }
 ```
 
