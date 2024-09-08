@@ -477,6 +477,25 @@ int main()
   - `const y = 20`
   - `enum { z = 30 }`
 
+## Control Flow
+- the flow or way in which program statement will be executed
+- there are 2 types of control flow:
+  - Branching
+  - Looping
+
+- ### Branching
+  - in the branching you do different condition ( single run ). 
+  - we have here:
+    - if, else
+    - switch
+
+- ### Looping
+  - in the Looping it will do same but repeat itself. 
+  - we have here:
+    - while
+    - for
+    - do while
+
 ## Keywords
 - `cout` = console out
 - `cin` = console in
