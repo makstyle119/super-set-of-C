@@ -589,6 +589,16 @@ int main()
     - for
     - do while
 
+## Logical Operators
+- `==` = for comparison
+- `&&` = and comparison
+- `||` = or comparison
+- `!` = not comparison
+- `<` = less then comparison
+- `<=` = less then and equal comparison
+- `>` = greater then comparison
+- `>=` = greater then and equal comparison
+
 ## Keywords
 - `cout` = console out
 - `cin` = console in
