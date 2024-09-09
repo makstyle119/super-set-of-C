@@ -13,8 +13,8 @@ int main()
   std::cout << oct_number << std::endl;
 
   int hex_number_print = 40; //
-  std::cout std::hex << hex_number_print << std::endl;
+  std::cout << std::hex << hex_number_print << std::endl;
 
   int oct_number_print = 30; //  0 represent octal_decimal
-  std::cout << std::oct << number << std::endl;
+  std::cout << std::oct << oct_number_print << std::endl;
 }
