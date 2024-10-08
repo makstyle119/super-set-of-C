@@ -8,44 +8,49 @@ using this name `super-set-of-c` is only because github doesn't allow me to use 
 ## Folder Structure:
 
 ```
-|- 001
-  |- hello-world.cpp
-|- 002
-  |- variables-basic.cpp
-|- 003
-  |- concat-bassic.cpp
-|- 004
-  |- input.cpp
-|- 005
-  |- func-pow.cpp
-|- 006
-  |- void-func.cpp
-|- 007
-  |- integer-data-type.cpp
-|- 008
-  |- char-data-type.cpp
-|- 009
-  |- escape-sequences.cpp
-|- 010
-  |- bool-data-type.cpp
-|- 011
-  |- floating-point-data-type.cpp
-|- 012
-  |- const-macro-enum.cpp
-|- 013
-  |- numeric-function.cpp
-|- 014
-  |- string-class-c-string.cpp
-|- 015
-  |- input-more-then-one.cpp
-|- 016
-  |- string-modifier.cpp
-|- 017
-  |- literal-constant.cpp
+|- lectures
+  |- 001
+    |- hello-world.cpp
+  |- 002
+    |- variables-basic.cpp
+  |- 003
+    |- concat-bassic.cpp
+  |- 004
+    |- input.cpp
+  |- 005
+    |- func-pow.cpp
+  |- 006
+    |- void-func.cpp
+  |- 007
+    |- integer-data-type.cpp
+  |- 008
+    |- char-data-type.cpp
+  |- 009
+    |- escape-sequences.cpp
+  |- 010
+    |- bool-data-type.cpp
+  |- 011
+    |- floating-point-data-type.cpp
+  |- 012
+    |- const-macro-enum.cpp
+  |- 013
+    |- numeric-function.cpp
+  |- 014
+    |- string-class-c-string.cpp
+  |- 015
+    |- input-more-then-one.cpp
+  |- 016
+    |- string-modifier.cpp
+  |- 017
+    |- literal-constant.cpp
+  |- 018
+    |- branching.cpp
+  |- 019
+    |- looping.cpp
 ```
 ## Code Explaining
 
-- 001/hello-world.cpp
+- lectures/001/hello-world.cpp
 ```
 # include <iostream> // C++ standard library which provide input and output method. eg: std::cout<<"Hello Wrold">>
 
@@ -60,7 +65,7 @@ int main() // main function - int is the return type of function
 }
 ```
 
-- 002/hello-world.cpp
+- lectures/002/hello-world.cpp
 ```
 # include <iostream>
 
@@ -77,7 +82,7 @@ int main() // main function
 }
 ```
 
-- 003/concat-bassic.cpp
+- lectures/003/concat-bassic.cpp
 ```
 # include <iostream>
 
@@ -92,7 +97,7 @@ int main() // main function
 }
 ```
 
-- 004/input.cpp
+- lectures/004/input.cpp
 ```
 # include <iostream>
 
@@ -110,7 +115,7 @@ int main() // main function
 }
 ```
 
-- 005/func-pow.cpp
+- lectures/005/func-pow.cpp
   - you can `declare` and then `define function` at once or just `declare` on top and then `define` in both but make sure you declare them before calling them.
 ```
 # include <iostream>
@@ -152,7 +157,7 @@ int main() // main function
 // }
 ```
 
-- 006/void-func.cpp
+- lectures/006/void-func.cpp
   - `void function` are those which doesn't `return` anything.
 ```
 # include <iostream>
@@ -190,7 +195,7 @@ int main() // main function
 }
 ```
 
-- 007/integer-data-type.cpp
+- lectures/007/integer-data-type.cpp
   - there are `8 type of integer`
     - short # `16 bit` Min.
     - int # `16 bit` Min.
@@ -220,7 +225,7 @@ int main()
 }
 ```
 
-- 008/char-data-type.cpp
+- lectures/008/char-data-type.cpp
   - there are `2 type of char`
     - signed char # `8 bit` Min.
     - unsigned char # `8 bit` Min - only positive.
@@ -242,7 +247,7 @@ int main()
 }
 ```
 
-- 009/escape-sequences.cpp
+- lectures/009/escape-sequences.cpp
 ```
 #include <iostream>
 
