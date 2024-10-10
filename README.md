@@ -47,6 +47,9 @@ using this name `super-set-of-c` is only because github doesn't allow me to use 
     |- branching.cpp
   |- 019
     |- looping.cpp
+|- projects
+  |- 001
+    |- guess-the-number.cpp
 ```
 ## Code Explaining
 
