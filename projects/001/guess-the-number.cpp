@@ -2,15 +2,55 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <vector>
+#include <array>
+#include <tuple>
+
+// void print_array(int array[], int count)
+// {
+//     for (int i = 0; i < count; i++)
+//     {
+//         std::cout << array[i] << '\t';
+//     }
+//     std::cout << std::endl;
+// }
+
+// void print_vector(std::vector<int> vector)
+// {
+//     for (int i = 0; i < vector.size(); i++)
+//     {
+//         std::cout << vector[i] << '\t';
+//     }
+//     std::cout << std::endl;
+// }
+
+void print_array(std::array<int, 251> array, int count)
+{
+    for (int i = 0; i < count; i++)
+    {
+        std::cout << array[i] << '\t';
+    }
+    std::cout << std::endl;
+}
 
 void play_game()
 {
+    std::array <int, 251> guesses;
+    int count = 0;
+    // int guesses[250];
+    // int guess_count = 0;
+
     int random = rand() % 251;
     std::cout << "guess the number:" << std::endl;
     while(true)
     {
         int guess;
         std::cin >> guess;
+
+        guesses[count++] = guess; 
+        // guesses[guess_count++] = guess;
+        // guesses.push_back(guess);
+
         if (guess == random)
         {
             std::cout << "you win\n";
@@ -25,6 +65,9 @@ void play_game()
             std::cout << "guess is too high\n";
         }
     }
+    print_array(guesses, count);
+    // print_vector(guesses);
+    // print_array(guesses, guess_count);
 }
 
 int main()
