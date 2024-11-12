@@ -808,6 +808,26 @@ int main()
     - C = Condition
     - U = Update
 
+## Array VS Vector VS STL Array
+- `Array`
+  - you can't reassign an array
+  - not recommended
+  - pass by pointer
+  - don't know their size
+  - size = static
+- `Vector`
+  - you can reassign a vector
+  - more recommended
+  - pass by value (default)
+  - know their size - .size()
+  - size = dynamic
+- `STL Array`
+  - you can reassign a stl array
+  - better then array
+  - pass by value (default) .size
+  - know their size - .size()
+  - size = dynamic
+
 ## Logical Operators
 - `==` = for comparison
 - `&&` = and comparison
