@@ -49,6 +49,8 @@ using this name `super-set-of-c` is only because github doesn't allow me to use 
     |- looping.cpp
   |- 020
     |- collections.cpp
+  |- 021
+    |- range-based-loop.cpp
 |- projects
   |- 001
     |- guess-the-number.cpp
@@ -769,6 +771,29 @@ int main()
     std::array<int, 5> data = {1, 2, 3, 4, 5}; // we will start will std::array - next we will define typeand length and in the last we assign the value
 
     print_array(data);
+}
+```
+
+- 020/range-based-loop.cpp
+```
+#include <iostream>
+#include <vector>
+#include <array>
+
+int main()
+{
+    int data[] = {1, 2, 3, 4, 5};
+
+    for(int n : data) // range base loop - always go for collection
+    {
+        std::cout << n << "\t";
+    }
+
+    // for(int i = 0; i < 5; i++)
+    // {
+    //     std::cout << data[i] << "\t";
+    // }
+    std::cout << "\n";
 }
 ```
 
