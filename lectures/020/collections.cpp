@@ -147,21 +147,23 @@
 // }
 
 // handling constant
-
-void print_array(const int data[], int size) // it's okay to send not-constant variable in a constant parameter
+namespace utils // you can create your own namespace just by typing namespace and the the name and large brackets - yes that's all
 {
-    for (int i = 0; i < size; i++)
+    void print_array(const int data[], int size) // it's okay to send not-constant variable in a constant parameter
     {
-        std::cout << data[i] << "\t";
+        for (int i = 0; i < size; i++)
+        {
+            std::cout << data[i] << "\t";
+        }
+        std::cout << std::endl;
     }
-    std::cout << std::endl;
 }
 
 int main()
 {
     int data[] = {1, 2, 3};
 
-    print_array(data, 3);
+    utils::print_array(data, 3);
 
     return 0;
 }

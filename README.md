@@ -55,10 +55,25 @@ using this name `super-set-of-c` is only because github doesn't allow me to use 
     |- files.cpp
   |- 023
     |- swap.cpp
+  |- 024
+    |- math_stuff.cpp
+    |- math_utils.cpp
+    |- math_utils.h
+    |- makefile
 |- projects
   |- 001
     |- guess-the-number.cpp
 ```
+
+## Ideal folder Structure (for C++ project)
+
+folder structure of any C++ project should go something like this:
+```
+  1- header file ( declaration - .h )
+  2- implementation file ( definition - .cpp )
+  3- main file ( calling - .cpp )
+```
+
 ## Code Explaining
 
 - lectures/001/hello-world.cpp
@@ -671,6 +686,7 @@ int main()
   - `STL Arrays`
     - `std::array<int, 5> data = {1, 2, 3, 4, 5};` // we will start will std::array - next we will define typeand length and in the last we assign the value
     - `&` // & is use to pass by value not pass by array
+  - `namespace utils` - you can create your own namespace just by typing namespace and the the name and large brackets - yes that's all
 ```
 #include <iostream>
 #include <limits>
@@ -821,21 +837,23 @@ int main()
 // }
 
 // handling constant
-
-void print_array(const int data[], int size) // it's okay to send not-constant variable in a constant parameter
+namespace utils // you can create your own namespace just by typing namespace and the the name and large brackets - yes that's all
 {
-    for (int i = 0; i < size; i++)
+    void print_array(const int data[], int size) // it's okay to send not-constant variable in a constant parameter
     {
-        std::cout << data[i] << "\t";
+        for (int i = 0; i < size; i++)
+        {
+            std::cout << data[i] << "\t";
+        }
+        std::cout << std::endl;
     }
-    std::cout << std::endl;
 }
 
 int main()
 {
     int data[] = {1, 2, 3};
 
-    print_array(data, 3);
+    utils::print_array(data, 3);
 
     return 0;
 }
@@ -865,14 +883,14 @@ int main()
 ```
 
 - 022/files.cpp
-  - `#include <fstream>` must include if you are working with files
-  - `std::ofstream file;` this is how you create a file object - object name(file can be anything)
-  - `file.open("hello.txt");` open a file
-  - `file.is_open()` check if file is open or not (not meaning en error - mostly permission error)
-  - `file << "hello world";` add anything inside a file
-  - `file.close();` close the file (mostly optional)
-  - `file.get();` // get file data
-  - `getline(file, line);` // another way to get file data
+  - `#include <fstream>` - must include if you are working with files
+  - `std::ofstream file;` - this is how you create a file object - object name(file can be anything)
+  - `file.open("hello.txt");` - open a file
+  - `file.is_open()` - check if file is open or not (not meaning en error - mostly permission error)
+  - `file << "hello world";` - add anything inside a file
+  - `file.close();` - close the file (mostly optional)
+  - `file.get();` - get file data
+  - `getline(file, line);` - another way to get file data
 ```
 #include <iostream>
 #include <fstream>
@@ -937,7 +955,7 @@ int main()
 }
 ```
 
-- 022/files.cpp
+- 023/swap.cpp
   - this `&` help to pass by reference
 ```
 #include <iostream>
@@ -962,6 +980,102 @@ int main()
 
     return 0;
 }
+```
+
+- 024/math_utils.h
+  - in header (.h) file we will only have declarations
+  - `#ifndef MATH_UTILS` - check if file already declared or not
+  - `#define MATH_UTILS` - declare the file if not already declared yet
+  - `#endif` - end of if statement (condition to check and then declared the file)
+  - `struct` - interface of an object
+```
+#ifndef MATH_UTILS
+#define MATH_UTILS
+
+struct Rectangle
+{
+    double length;
+    double width;
+};
+
+namespace utils
+{
+    double area(double length, double width);
+
+    double area(double length);
+
+    double area(Rectangle rectangle);
+
+    double pow(double base, int pow = 2);
+}
+
+
+
+#endif
+
+```
+
+- 024/math_utils.cpp
+  - all your functions/method will be here but not interfaces
+```
+#include "math_utils.h"
+
+namespace utils {
+    double area(double length, double width)
+    {
+        return length * width;
+    }
+
+    double area(double length)
+    {
+        return length * length;
+    }
+
+    double area(Rectangle rectangle)
+    {
+        return rectangle.length * rectangle.width;
+    }
+
+    double pow(double base, int pow)
+    {
+        int total = 1;
+        for (int i = 0; i < pow; i++)
+        {
+            total *= base;
+        }
+        return total;
+    }
+}
+```
+
+- 024/math_stuff.cpp
+  - this is the main file
+  - `#include "math_utils.h"` - including local functions, " (double quote meaning looking in same directory)
+```
+#include <iostream>
+#include "math_utils.h"
+
+int main()
+{
+    std::cout << utils::pow(3, 3) << std::endl;
+    std::cout << utils::pow(3) << std::endl;
+}
+```
+
+- 024/makefile
+  - here you will add all the command to stop running g++ command again and again
+```
+math: math_stuff.o math_utils.o
+	g++ math_stuff.o math_utils.o -o math
+
+math_stuff.o: math_stuff.cpp
+	g++ -c math_stuff.cpp
+
+math_utils.o: math_utils.cpp
+	g++ -c math_utils.cpp
+
+clean:
+	rm *.o math
 ```
 
 ## Variable
@@ -1040,6 +1154,11 @@ int main()
 - `std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');` = you can use it to clear cin
 - `-std=c++11` = use when you want to use c++11
 - `size()` = use in vector to identify their length
+- `struct` = interface of an object
+- `function overloading` = when multiple function with same but different parameters - in c++ return type is not a part of signature
+- `pre-processor directives` = prevent multi declaration (imports of the same file)
+- `-c` = only use use you want to get object file and keep source code safe and secret
+- `namespace namespace_name` = you can create a namespace just by give a name and then two large brackets - yes that's all - and why ? to group functions together
 
 ## Style Guide
 - `//` this is a single line comment = use for single line comments
