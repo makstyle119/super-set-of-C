@@ -957,17 +957,51 @@ int main()
 
 - 023/swap.cpp
   - this `&` help to pass by reference
+  - `template <typename T>` // this is a template - it can be used for any data type - here you are dynamically assigning the type
 ```
 #include <iostream>
 
-void swap(int &a, int &b) // this & help to pass by reference
+// void swap(int &a, int &b) // this & help to pass by reference
+// {
+//     int temp = a;
+//     a = b; 
+//     b = temp;
+
+//     std::cout << "value of v: " << a << ", and value of b is: " <<  b << std::endl;
+// } 
+
+// int main()
+// {
+//     int a = 10;
+//     int b = 20;
+
+//     swap(a, b);
+
+//     std::cout << "value of v: " << a << ", and value of b is: " <<  b << std::endl;
+
+//     return 0;
+// }
+
+template <typename T> // this is a template - it can be used for any data type - here you are dynamically assigning the type
+
+void swap(T &a, T &b) // this & help to pass by reference
 {
-    int temp = a;
+    T temp = a;
     a = b; 
     b = temp;
 
     std::cout << "value of v: " << a << ", and value of b is: " <<  b << std::endl;
-} 
+}
+
+// removed the below code and used template instead
+// void swap(std::string &a, std::string &b) // this & help to pass by reference
+// {
+//     std::string temp = a;
+//     a = b; 
+//     b = temp;
+
+//     std::cout << "value of v: " << a << ", and value of b is: " <<  b << std::endl;
+// }
 
 int main()
 {
@@ -976,7 +1010,14 @@ int main()
 
     swap(a, b);
 
-    std::cout << "value of v: " << a << ", and value of b is: " <<  b << std::endl;
+    std::cout << "(integer) value of v: " << a << ", and value of b is: " <<  b << std::endl;
+
+    std::string a = "MAK";
+    std::string b = "Maria";
+
+    swap(a, b);
+
+    std::cout << "(String) value of v: " << a << ", and value of b is: " <<  b << std::endl;
 
     return 0;
 }
@@ -1159,6 +1200,11 @@ clean:
 - `pre-processor directives` = prevent multi declaration (imports of the same file)
 - `-c` = only use use you want to get object file and keep source code safe and secret
 - `namespace namespace_name` = you can create a namespace just by give a name and then two large brackets - yes that's all - and why ? to group functions together
+- `struct` 
+  = public by default 
+  = POD = Plain Old Data (generally store variables and no functions ( you can but don't ))
+- `class`
+  = private by default
 
 ## Style Guide
 - `//` this is a single line comment = use for single line comments
