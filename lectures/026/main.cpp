@@ -1,6 +1,7 @@
 #include <iostream>
 #include <istream>
 #include "user.h"
+#include "teacher.h"
 
 int main()
 {
@@ -35,5 +36,16 @@ int main()
     output_status(user4); // friend function
     std::cout << user4 << std::endl; // operator overloading
 
+    std::cout << "-------------------\n";
+
+    Teacher teacher1; // object of class Teacher
+
+    teacher1.first_name = "Moiz"; // access member variable using dot operator
+    teacher1.last_name = "Khan";
+
+    teacher1.output(); // access member function using dot operator
+
+    User& t2 = teacher1; // reference of base class
+    t2.output(); // access member function using reference
     return 0;
 }

@@ -1172,6 +1172,7 @@ int main()
   - `user.get_status();` // access member function using dot operator
     - in c++ constructor will be define by using same name of the class and not like other languages like python
   - `User user("Moiz", "Ali");` // assign value to member variable using constructor
+  - `virtual` // virtual allow us to override the method in the derived class
 ```
 #include <iostream>
 

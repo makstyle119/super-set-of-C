@@ -1,5 +1,3 @@
-#include <iostream>
-#include <istream>
 #include "user.h"
 
         int User::get_total_users() // static member function - static method can only use static member variable
@@ -35,6 +33,12 @@
         {
             total_users--;
             std::cout << "Destructor\n";
+        }
+        void User::output() // method - member function
+        {
+            std::cout << "First name: " << first_name << std::endl;
+            std::cout << "Last name: " << last_name << std::endl;
+            std::cout << "Status: " << status << std::endl;
         }
         void output_status(User user); // friend function - access private member variable
         std::ostream& operator<<(std::ostream& output, const User user);

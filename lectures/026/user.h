@@ -1,3 +1,7 @@
+#include <iostream>
+#include <istream>
+#include <string>
+
 #ifndef USER_H
 #define USER_H
 
@@ -15,6 +19,7 @@ class User
         User();
         User(std::string first_name, std::string last_name);
         ~User();
+        virtual void output(); // virtual allow us to override the method in the derived class
         friend void output_status(User user);
         friend std::ostream& operator<<(std::ostream& output, const User user);
         friend std::istream& operator>>(std::istream& input, User &user);
