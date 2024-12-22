@@ -64,6 +64,8 @@ using this name `super-set-of-c` is only because github doesn't allow me to use 
     |- struct.cpp
   |- 026
     |- class.cpp
+  |- 027
+    |- positioning.cpp
 |- projects
   |- 001
     |- guess-the-number.cpp
@@ -1215,16 +1217,100 @@ class User // class is a blueprint for object
 
 int User::total_users = 0; // static member variable - static member variable can only be initialize outside the class
 
+std::ostream& operator<<(std::ostream& output, const User user) // operator overloading - friend function - access public member variable
+{
+    output << "First name: " << user.first_name << std::endl;
+    output << "Last name: " << user.last_name << std::endl;
+    return output;
+};
+
+std::istream& operator>>(std::istream& input, User &user) // operator overloading - friend function - access public member variable
+{
+    std::cout << "Enter first name and last name: ";
+    input >> user.first_name >> user.last_name;
+    return input;
+};
+
 int main()
 {
-    // User user; // object of class User
-    User user("Moiz", "Ali"); // assign value to member variable using constructor
-    // user.first_name = "Moiz"; // access member variable using dot operator
-    // user.last_name = "Ali";
-    
-    std::cout << "First name: " << user.first_name << std::endl;
-    std::cout << "status: " << user.get_status() << std::endl; // access member function using dot operator
+    User user1; // object of class User
+    user1.first_name = "Moiz"; // access member variable using dot operator
+    user1.last_name = "Ali";
+    std::cout << "First name: " << user1.first_name << std::endl;
+    std::cout << "last name: " << user1.last_name << std::endl;
+    std::cout << "status: " << user1.get_status() << std::endl; // access member function using dot operator
     std::cout << "Total users: " << User::get_total_users() << std::endl; // you will access static member function using class name
+
+    std::cout << "-------------------\n";
+
+    User user2("Syed", "Maria"); // assign value to member variable using constructor
+    std::cout << "First name: " << user2.first_name << std::endl;
+    std::cout << "last name: " << user2.last_name << std::endl;
+    std::cout << "status: " << user2.get_status() << std::endl; // access member function using dot operator
+    std::cout << "Total users: " << User::get_total_users() << std::endl; // you will access static member function using class name
+
+    std::cout << "-------------------\n";
+
+    User user3; // object of class User
+    user3.first_name = "MAK"; // access member variable using dot operator
+    user3.last_name = "Style110";
+
+    std::cout << user3 << std::endl; // operator overloading
+
+    std::cout << "-------------------\n";
+
+    User user4; // object of class User
+    std::cin >> user4; // operator overloading
+    std::cout << user4 << std::endl; // operator overloading
+
+    return 0;
+}
+```
+
+- 027/positioning
+
+```
+#include <iostream>
+
+class Position
+{
+    public:
+        int x = 10;
+        int y = 20;
+        Position operator + (Position pos)
+        {
+            Position new_pos;
+            new_pos.x = x + pos.x;
+            new_pos.y = y + pos.y; 
+            return new_pos;
+        }
+        bool operator == (Position pos)
+        {
+            if (x == pos.x && y == pos.y)
+            {
+                return true;
+            }
+            return false;
+        }
+};
+
+
+int main ()
+{
+    Position pos1, pos2;
+    pos1.x = 30;
+    pos2.x = 30;
+    Position pos3 = pos1 + pos2;
+    std::cout << pos3.x << ", " << pos3.y << std::endl;
+
+    if (pos1 == pos2)
+    {
+        std::cout << "They are the same" << std::endl;
+    }
+    else
+    {
+        std::cout << "They are different" << std::endl;
+    }
     return 0;
 }
 ```
@@ -1320,7 +1406,9 @@ int main()
 - `polymorphism` = where classes kinda interpreted as other classes
 - `abstraction` = ...finding
 - `instantiation` = creating an object from a class
-
+- `static`
+  = static method and variables are class only
+  = you have to define value of a static out of the class
 ## Style Guide
 - `//` this is a single line comment = use for single line comments
 - `/*
