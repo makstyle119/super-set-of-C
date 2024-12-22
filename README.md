@@ -1516,6 +1516,11 @@ int main ()
   - size = dynamic
 
 ## Logical Operators
+- `+` = for addition
+- `-` = for subtraction
+- `*` = for multiplication
+- `/` = for division
+- `%` = for mod (remainder)
 - `==` = for comparison
 - `&&` = and comparison
 - `||` = or comparison
@@ -1562,3 +1567,7 @@ int main ()
 - C++ is caseSensitive, means name and Name are two other things - `kabab case` is recommended in C++, eg: my_app.
 - C++ ignore `white spaces` so you can hit the enter button as much as you want - ( not recommended )
 - functions should call over logic
+
+## Resources
+I start my journey using this cool stuff so shotout to them:
+- https://www.youtube.com/watch?v=_bYFu9mBnr4&list=PL_c9BZzLwBRJVJsIfe97ey45V4LP_HXiG [Caleb Curry](https://www.youtube.com/@codebreakthrough)
