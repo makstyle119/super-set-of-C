@@ -62,6 +62,8 @@ using this name `super-set-of-c` is only because github doesn't allow me to use 
     |- makefile
   |- 025
     |- struct.cpp
+  |- 026
+    |- class.cpp
 |- projects
   |- 001
     |- guess-the-number.cpp
@@ -1155,6 +1157,78 @@ int main()
 }
 ```
 
+- 026/class
+  - `class User` // class is a blueprint for object
+  - `int status = 1;` // default is private - private member variable
+  - `std::string first_name;` // member variables
+  - `int get_status()` // method are ideal for class
+  - `User user;` // object of class User
+  - `user.first_name = "John";` // access member variable using dot operator
+  - `user.get_status();` // access member function using dot operator
+    - in c++ constructor will be define by using same name of the class and not like other languages like python
+  - `User user("Moiz", "Ali");` // assign value to member variable using constructor
+```
+#include <iostream>
+
+class User // class is a blueprint for object
+{
+    static int total_users; // static member variable
+    int status = 1; // default is private - private member variable
+    
+    public:
+        static int get_total_users() // static member function - static method can only use static member variable
+        {
+            return total_users;
+        }
+        std::string first_name; // member variables
+        std::string last_name;
+        int get_status() // this is a getter - method are ideal for class - (use to access private member variable)
+        {
+            return status;
+        }
+        void set_status(int status) // this is a setter - (use to access private member variable)
+        {
+            if (status >= 0)
+                this->status = status;
+            else
+                this->status = 0;
+        }
+        User() // constructor - special method - replace default constructor
+        {
+            total_users++;
+            std::cout << "Constructor\n";
+        }
+        User(std::string first_name, std::string last_name) // constructor - special method
+        {
+            total_users++;
+            this->first_name = first_name;
+            this->last_name = last_name;
+
+            std::cout << "Constructor\n";
+        }
+        ~User() // destructor - special method
+        {
+            total_users--;
+            std::cout << "Destructor\n";
+        }
+};
+
+int User::total_users = 0; // static member variable - static member variable can only be initialize outside the class
+
+int main()
+{
+    // User user; // object of class User
+    User user("Moiz", "Ali"); // assign value to member variable using constructor
+    // user.first_name = "Moiz"; // access member variable using dot operator
+    // user.last_name = "Ali";
+    
+    std::cout << "First name: " << user.first_name << std::endl;
+    std::cout << "status: " << user.get_status() << std::endl; // access member function using dot operator
+    std::cout << "Total users: " << User::get_total_users() << std::endl; // you will access static member function using class name
+    return 0;
+}
+```
+
 ## Variable
 - first you define the type of variable
 - second you give it a name:
@@ -1241,6 +1315,11 @@ int main()
   = POD = Plain Old Data (generally store variables and no functions ( you can but don't ))
 - `class`
   = private by default
+- `encapsulation` = where we can hide inner detail of an class
+- `inheritance` = where classes can inheritance from another classes 
+- `polymorphism` = where classes kinda interpreted as other classes
+- `abstraction` = ...finding
+- `instantiation` = creating an object from a class
 
 ## Style Guide
 - `//` this is a single line comment = use for single line comments
