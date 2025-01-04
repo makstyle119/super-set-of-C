@@ -1569,5 +1569,5 @@ int main ()
 - functions should call over logic
 
 ## Resources
-I start my journey using this cool stuff so shotout to them:
+I start my journey using this cool stuff so shout to them:
 - https://www.youtube.com/watch?v=_bYFu9mBnr4&list=PL_c9BZzLwBRJVJsIfe97ey45V4LP_HXiG [Caleb Curry](https://www.youtube.com/@codebreakthrough)
