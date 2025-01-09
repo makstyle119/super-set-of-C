@@ -8,69 +8,69 @@ using this name `super-set-of-c` is only because github doesn't allow me to use 
 ## Folder Structure:
 
 ```
-|- lectures
-  |- 001
+📂 lectures
+  📂 001
     |- hello-world.cpp
-  |- 002
+  📂 002
     |- variables-basic.cpp
-  |- 003
+  📂 003
     |- concat-bassic.cpp
-  |- 004
+  📂 004
     |- input.cpp
-  |- 005
+  📂 005
     |- func-pow.cpp
-  |- 006
+  📂 006
     |- void-func.cpp
-  |- 007
+  📂 007
     |- integer-data-type.cpp
-  |- 008
+  📂 008
     |- char-data-type.cpp
-  |- 009
+  📂 009
     |- escape-sequences.cpp
-  |- 010
+  📂 010
     |- bool-data-type.cpp
-  |- 011
+  📂 011
     |- floating-point-data-type.cpp
-  |- 012
+  📂 012
     |- const-macro-enum.cpp
-  |- 013
+  📂 013
     |- numeric-function.cpp
-  |- 014
+  📂 014
     |- string-class-c-string.cpp
-  |- 015
+  📂 015
     |- input-more-then-one.cpp
-  |- 016
+  📂 016
     |- string-modifier.cpp
-  |- 017
+  📂 017
     |- literal-constant.cpp
-  |- 018
+  📂 018
     |- branching.cpp
-  |- 019
+  📂 019
     |- looping.cpp
-  |- 020
+  📂 020
     |- collections.cpp
-  |- 021
+  📂 021
     |- range-based-loop.cpp
-  |- 022
+  📂 022
     |- files.cpp
-  |- 023
+  📂 023
     |- swap.cpp
-  |- 024
+  📂 024
     |- math_stuff.cpp
     |- math_utils.cpp
     |- math_utils.h
     |- makefile
-  |- 025
+  📂 025
     |- struct.cpp
-  |- 026
+  📂 026
     |- class.cpp
     |- user.cpp
     |- user.h
     |- main.cpp
-  |- 027
+  📂 027
     |- positioning.cpp
-|- projects
-  |- 001
+📂 projects
+  📂 001
     |- guess-the-number.cpp
 ```
 
