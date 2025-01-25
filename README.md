@@ -69,6 +69,8 @@ using this name `super-set-of-c` is only because github doesn't allow me to use 
     |- main.cpp
   📂 027
     |- positioning.cpp
+  📂 028
+    |- pointer.cpp
 📂 projects
   📂 001
     |- guess-the-number.cpp
@@ -1411,7 +1413,7 @@ int main()
 }
 ```
 
-- 027/positioning
+- 027/positioning.cpp
 
 ```
 #include <iostream>
@@ -1456,6 +1458,28 @@ int main ()
         std::cout << "They are different" << std::endl;
     }
     return 0;
+}
+```
+- 028/pointer.cpp
+  - `&`// address of operator
+    - it will get the memory address of the variable (which might be 12 character long)
+  - `*` // is a dereference operator
+  - `pointer` // in simple will point in the memory location so if you made a point with an existing variable the pointer will point to the same memory location
+  - `why to use ?`
+    - now you can use same memory location for 2 variables
+    - commonly use in function to get the exact value from the memory
+      - benefit ?
+        - in simple now function can change the value in memory otherwise function will keep parameter in it's scope unless you return them
+  - `new` // this keyword will return a pointer
+```
+// there is a phase first go with reference and if it's not possible with reference then with pointer
+# include <iostream>
+
+int main()
+{
+    int x = 5;
+    // address of operator = & - it will get the memory address of the variable (which might be 12 character long)
+    int *y = &x; // y is a pointer to an integer - it stores the address of an integer - x - * is a dereference operator - identifies the variable as a pointer
 }
 ```
 
@@ -1558,6 +1582,7 @@ int main ()
 - `static`
   = static method and variables are class only
   = you have to define value of a static out of the class
+
 ## Style Guide
 - `//` this is a single line comment = use for single line comments
 - `/*
@@ -1570,4 +1595,5 @@ int main ()
 
 ## Resources
 I start my journey using this cool stuff so shout to them:
-- https://www.youtube.com/watch?v=_bYFu9mBnr4&list=PL_c9BZzLwBRJVJsIfe97ey45V4LP_HXiG [Caleb Curry](https://www.youtube.com/@codebreakthrough)
+- <a href="https://www.youtube.com/playlist?list=PL_c9BZzLwBRJVJsIfe97ey45V4LP_HXiG" target="_blank">C++ Tutorials by Caleb Curry</a> from **001/hello-world.cpp** to **027/positioning.cpp**
+- <a href="https://www.youtube.com/watch?v=rtgwvkaYt1A" target="_blank">C++ Pointers - Finally Understand Pointers by Caleb Curry</a> for **028/pointer.cpp**
