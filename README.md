@@ -71,6 +71,7 @@ using this name `super-set-of-c` is only because github doesn't allow me to use 
     |- positioning.cpp
   📂 028
     |- pointer.cpp
+    |- pointer-2.cpp
 📂 projects
   📂 001
     |- guess-the-number.cpp
@@ -88,7 +89,7 @@ folder structure of any C++ project should go something like this:
 ## Code Explaining
 
 - lectures/001/hello-world.cpp
-```
+```c++
 # include <iostream> // C++ standard library which provide input and output method. eg: std::cout<<"Hello Wrold">>
 
 // using namespace std; // using standard namespace
@@ -103,7 +104,7 @@ int main() // main function - int is the return type of function
 ```
 
 - lectures/002/hello-world.cpp
-```
+```c++
 # include <iostream>
 
 using std::cout;
@@ -120,7 +121,7 @@ int main() // main function
 ```
 
 - lectures/003/concat-bassic.cpp
-```
+```c++
 # include <iostream>
 
 using std::cout;
@@ -135,7 +136,7 @@ int main() // main function
 ```
 
 - lectures/004/input.cpp
-```
+```c++
 # include <iostream>
 
 using std::cout;
@@ -154,7 +155,7 @@ int main() // main function
 
 - lectures/005/func-pow.cpp
   - you can `declare` and then `define function` at once or just `declare` on top and then `define` in both but make sure you declare them before calling them.
-```
+```c++
 # include <iostream>
 
 using std::cout;
@@ -196,7 +197,7 @@ int main() // main function
 
 - lectures/006/void-func.cpp
   - `void function` are those which doesn't `return` anything.
-```
+```c++
 # include <iostream>
 # include <cmath>
 
@@ -242,7 +243,7 @@ int main() // main function
     - int # `16 bit` Min - only positive.
     - long # `32 bit` Min - only positive.
     - long long # `64 bit` Min - only positive.
-```
+```c++
 #include <iostream>
 #include <climits>
 
@@ -266,7 +267,7 @@ int main()
   - there are `2 type of char`
     - signed char # `8 bit` Min.
     - unsigned char # `8 bit` Min - only positive.
-```
+```c++
 #include <iostream>
 #include <climits>
 
@@ -285,7 +286,7 @@ int main()
 ```
 
 - lectures/009/escape-sequences.cpp
-```
+```c++
 #include <iostream>
 
 using std::cout;
@@ -309,7 +310,7 @@ int main()
   - there are `2 type of bool in almost all language unless you come from DreamBerd`
     - `True` != `0` // anything which is not `0`.
     - `False` = `0` // only `0`.
-```
+```c++
 #include <iostream>
 
 using std::cout;
@@ -328,7 +329,7 @@ int main()
     - `float` // trust worthy upto 6 digits.
     - `double` // 77000 = 7.7 * 10^4 = 7.7E4 (scientific notation) - trust worthy upto 15 digits.
     - `long double` // trust worthy upto 18 digits
-```
+```c++
 #include <iostream>
 
 using std::cout;
@@ -348,7 +349,7 @@ int main()
     - `const`
     - `enum`
     - `define`
-```
+```c++
 #include <iostream>
 #define X 10 // macro - const - define - you can't redeclare it - use in C
 
@@ -364,7 +365,7 @@ int main()
 ```
 
 - 013/numeric-function.cpp
-```
+```c++
 #include <iostream>
 #include <cmath>
 
@@ -388,7 +389,7 @@ int main()
   - there are `2 ways to declare string`
     - `string` - use in C++
     - `char` - come from C
-```
+```c++
 #include <iostream>
 #include <string>
 
@@ -409,7 +410,7 @@ int main()
   - there are `2 ways to get input which is more then one word`
     - `getline` - use for string
     - `cin.getline()` - use for number
-```
+```c++
 #include <iostream>
 #include <string>
 
@@ -436,7 +437,7 @@ int main()
     - `find("test")` - return the `index` of first character of the found word
     - `substr(8, 2)` - first is `index` and second is `length`, return the between character from the index to the length
     - `find_first_of('abcd')` - return the `index` of first found character from the string in parameter
-```
+```c++
 #include <iostream>
 
 int main()
@@ -483,7 +484,7 @@ int main()
       - `0` octal decimal
     - `hex` - you can use hex as a pipe to convert number into hexadecimal
     - `oct` - you can use oct as a pipe to convert number into octal decimal
-```
+```c++
 #include <iostream>
 #include <string>
 
@@ -518,7 +519,7 @@ int main()
       - `case` is `if`
       - second `case` is `else if`
       - `default` is `else`
-```
+```c++
 #include <string>
 #include <iostream>
 
@@ -607,7 +608,7 @@ int main()
       - in `while` loop we initialize the value first
       - then we will add our condition between the parameters after `while` keyword
       - and in th last we will update the variable
-```
+```c++
 #include <string>
 #include <iostream>
 
@@ -698,7 +699,7 @@ int main()
     - `std::array<int, 5> data = {1, 2, 3, 4, 5};` // we will start will std::array - next we will define typeand length and in the last we assign the value
     - `&` // & is use to pass by value not pass by array
   - `namespace utils` - you can create your own namespace just by typing namespace and the the name and large brackets - yes that's all
-```
+```c++
 #include <iostream>
 #include <limits>
 #include <vector>
@@ -871,7 +872,7 @@ int main()
 ```
 
 - 021/range-based-loop.cpp
-```
+```c++
 #include <iostream>
 #include <vector>
 #include <array>
@@ -902,7 +903,7 @@ int main()
   - `file.close();` - close the file (mostly optional)
   - `file.get();` - get file data
   - `getline(file, line);` - another way to get file data
-```
+```c++
 #include <iostream>
 #include <fstream>
 #include <vector>
@@ -969,7 +970,7 @@ int main()
 - 023/swap.cpp
   - this `&` help to pass by reference
   - `template <typename T>` // this is a template - it can be used for any data type - here you are dynamically assigning the type
-```
+```c++
 #include <iostream>
 
 // void swap(int &a, int &b) // this & help to pass by reference
@@ -1040,7 +1041,7 @@ int main()
   - `#define MATH_UTILS` - declare the file if not already declared yet
   - `#endif` - end of if statement (condition to check and then declared the file)
   - `struct` - interface of an object
-```
+```c++
 #ifndef MATH_UTILS
 #define MATH_UTILS
 
@@ -1069,7 +1070,7 @@ namespace utils
 
 - 024/math_utils.cpp
   - all your functions/method will be here but not interfaces
-```
+```c++
 #include "math_utils.h"
 
 namespace utils {
@@ -1103,7 +1104,7 @@ namespace utils {
 - 024/math_stuff.cpp
   - this is the main file
   - `#include "math_utils.h"` - including local functions, " (double quote meaning looking in same directory)
-```
+```c++
 #include <iostream>
 #include "math_utils.h"
 
@@ -1116,7 +1117,7 @@ int main()
 
 - 024/makefile
   - here you will add all the command to stop running g++ command again and again
-```
+```c++
 math: math_stuff.o math_utils.o
 	g++ math_stuff.o math_utils.o -o math
 
@@ -1137,7 +1138,7 @@ clean:
   - `User user;` // just like object creation in class
   - `user.first_name = "John";` // access member variable using dot operator
   - `user.get_status()` // access member function using dot operator
-```
+```c++
 #include <iostream>
 
 struct User  // same as class but default access specifier is public
@@ -1175,7 +1176,7 @@ int main()
     - in c++ constructor will be define by using same name of the class and not like other languages like python
   - `User user("Moiz", "Ali");` // assign value to member variable using constructor
   - `virtual` // virtual allow us to override the method in the derived class
-```
+```c++
 #include <iostream>
 
 class User // class is a blueprint for object
@@ -1275,7 +1276,7 @@ int main()
 
 - 026/user.h
 
-```
+```c++
 #ifndef USER_H
 #define USER_H
 
@@ -1303,7 +1304,7 @@ class User
 
 - 026/user.cpp
 
-```
+```c++
 #include <iostream>
 #include <istream>
 #include "user.h"
@@ -1371,7 +1372,7 @@ std::istream& operator>>(std::istream& input, User &user) // operator overloadin
 
 - 026/main.cpp
 
-```
+```c++
 #include <iostream>
 #include <istream>
 #include "user.h"
@@ -1415,7 +1416,7 @@ int main()
 
 - 027/positioning.cpp
 
-```
+```c++
 #include <iostream>
 
 class Position
@@ -1471,7 +1472,7 @@ int main ()
       - benefit ?
         - in simple now function can change the value in memory otherwise function will keep parameter in it's scope unless you return them
   - `new` // this keyword will return a pointer
-```
+```c++
 // there is a phase first go with reference and if it's not possible with reference then with pointer
 # include <iostream>
 
@@ -1480,6 +1481,41 @@ int main()
     int x = 5;
     // address of operator = & - it will get the memory address of the variable (which might be 12 character long)
     int *y = &x; // y is a pointer to an integer - it stores the address of an integer - x - * is a dereference operator - identifies the variable as a pointer
+}
+```
+
+- 028/pointer.cpp
+```c++
+#include <iostream>
+
+int main()
+{
+    int x = 10;
+    int *y = &x;
+    std::cout << "x = " << x << std::endl; // 10
+    std::cout << "y = " << y << std::endl; // 0x7ffebf7b3b7c (some memory address)
+    std::cout << "*y = " << *y << std::endl; // 10
+
+    x = 20;
+    std::cout << "x = " << x << std::endl; // 20
+    std::cout << "y = " << y << std::endl; // 0x7ffebf7b3b7c (same memory address from above)
+    std::cout << "*y = " << *y << std::endl; // 20
+    
+    *y = 30; // as you can see we have to use * to update the value of x - value at the memory address of y
+    std::cout << "x = " << x << std::endl; // 30
+    std::cout << "y = " << y << std::endl; // 0x7ffebf7b3b7c (same memory address from above)
+    std::cout << "*y = " << *y << std::endl; // 30
+    // as you can see the value *y update the value of x as well because y is pointing to the memory address of x so when we update the value of *y it will update the value of x as well
+
+    int z = 40;
+    y = &z; // we can change the memory address of y to point to z using &z
+    std::cout << "x = " << x << std::endl; // 30
+    std::cout << "y = " << y << std::endl; // 0x7ffebf7b3b12 (some other memory address - z)
+    std::cout << "z = " << z << std::endl; // 40
+    std::cout << "*y = " << *y << std::endl; // 40
+    // as you can see now y is pointing to z so when we update the value of *y it will update the value of z as well
+
+    return 0;
 }
 ```
 
